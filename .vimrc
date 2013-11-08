@@ -1,6 +1,7 @@
 set history=700
 syntax enable 
 syntax on
+set number
 
 try
 	colorscheme desert
