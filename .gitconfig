@@ -1,0 +1,2 @@
+[alias]
+    gr = "log --graph --oneline --all"
