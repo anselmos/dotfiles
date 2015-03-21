@@ -1,0 +1,12 @@
+#!/bin/bash 
+function killp {
+    ps -afe | awk '/'$1'/ {print $0} '
+    echo "going to kill this processes, Agree ?"
+    select yn in "Yes" "No"; do
+        case $yn in
+            Yes ) sudo kill -9 $(ps -afe | awk '/'$1'/ {print $2}') ; break;;
+            No ) echo "Cancelled.";exit;;
+        esac
+    done
+    ps -afe | awk '/'$1'/ {print $0} '
+}

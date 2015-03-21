@@ -3,3 +3,4 @@ EDITOR=vi
 
 . ~/.profile.setvi
 . ~/.profile.aliases
+. ~/.profile.scripts
