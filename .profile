@@ -1,6 +1,6 @@
 export EDITOR=vi
 EDITOR=vi
-export PATH=$PATH:./.profile.sh
+export PATH=$PATH:~/.profile.sh
 
 . ~/.profile.scripts
 . ~/.profile.prompt
