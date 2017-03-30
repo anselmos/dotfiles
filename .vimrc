@@ -41,8 +41,9 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 "
 " VimWiki setup:
-"
-let g:vimwiki_ext2syntax = {'.md' : 'markdown' , '.markdown' : 'markdown'}
+" Temporary removing this .md extension syntax for vimwiki - it overrides
+" vim-markdown that I'm currently using when writing posts on pelican-blog.
+" let g:vimwiki_ext2syntax = {'.md' : 'markdown' , '.markdown' : 'markdown'}
 
 set history=700
 syntax enable 
