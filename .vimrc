@@ -8,9 +8,18 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 
+" Jedi Vim plugin for autocompletion
 Plugin 'davidhalter/jedi-vim'
+" Vim Markdown.
+Plugin 'plasticboy/vim-markdown'
+" Vim Tmux command automator
+Plugin 'benmills/vimux'
+" A Git fuse for vim
+Plugin 'tpope/vim-fugitive'
+" A lintener and syntax checker!
+Plugin 'vim-syntastic/syntastic'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -48,3 +57,17 @@ set smarttab
 " 1 tab == 4 spaces
 set shiftwidth=4
 set tabstop=4
+set nofoldenable
+" vimux key-bindings to commands made in tmux pane.
+nmap <leader>r :call VimuxRunCommand("make run")<cr>
+nmap <leader>d :call VimuxRunCommand("make deploy")<cr>
+
+" Number of spaces that a pre-existing tab is equal to.
+" For the amount of space used for a new tab use shiftwidth.
+highlight BadWhitespace ctermbg=red guibg=red
+
+au BufRead,BufNewFile *.py,*.pyw match BadWhitespace /^\t\+/
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+let g:syntastic_python_checkers = ['pylint']
+" add django plugin for pylinter
+let g:syntastic_python_pylint_args = "--load-plugins pylint_django"
