@@ -20,6 +20,8 @@ Plugin 'benmills/vimux'
 Plugin 'tpope/vim-fugitive'
 " A lintener and syntax checker!
 Plugin 'vim-syntastic/syntastic'
+" adds information about marks at left side
+Plugin 'kshenoy/vim-signature'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -39,7 +41,11 @@ filetype plugin indent on    " required
 set history=700
 syntax enable 
 syntax on
+" Change to hybrid mode - it's much better.
+set relativenumber
 set number
+" according to
+" http://jeffkreeftmeijer.com/2013/vims-new-hybrid-line-number-mode/
 
 try
 	colorscheme desert
