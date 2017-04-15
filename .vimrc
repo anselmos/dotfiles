@@ -24,6 +24,8 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'kshenoy/vim-signature'
 " Wiki in VIM!
 Plugin 'vimwiki/vimwiki'
+" Surroundings for code
+Plugin 'tpope/vim-surround'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
