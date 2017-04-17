@@ -13,4 +13,9 @@ ln -s $pwd/.profile.prompt $HOME/.profile.prompt
 ln -s $pwd/.profile.scripts $HOME/.profile.scripts
 ln -s $pwd/.profile.setvi $HOME/.profile.setvi
 
+# Profile.sh for git-shell script with git-prompt from zsh.
+
+mkdir $HOME/.profile.sh
+ln -s $pwd/.profile.sh/.git-prompt.sh $HOME/.profile.sh/.git-prompt.sh
+
 ln -s $pwd/.profile $HOME/.profile
