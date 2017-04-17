@@ -19,3 +19,5 @@ mkdir $HOME/.profile.sh
 ln -s $pwd/.profile.sh/.git-prompt.sh $HOME/.profile.sh/.git-prompt.sh
 
 ln -s $pwd/.profile $HOME/.profile
+# Bashrc that has .profile added as "source"
+ln -s $pwd/.bashrc $HOME/.bashrc
