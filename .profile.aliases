@@ -3,3 +3,4 @@ alias ll="ls -alh"
 if upower --version >/dev/null 2>&1; then
     alias statebat="upower -i $(upower -e | grep 'BAT' ) | grep -E \"state|time| full|percentage\""
 fi
+alias dev=".profile.tmux/dev"

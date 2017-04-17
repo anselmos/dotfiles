@@ -1,0 +1,2 @@
+#!/bin/sh
+tmux new-session "tmux source-file ~/.profile.tmux/dev.session"

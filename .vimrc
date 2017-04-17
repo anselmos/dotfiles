@@ -11,6 +11,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Jedi Vim plugin for autocompletion
+Plugin 'davidhalter/jedi'
 Plugin 'davidhalter/jedi-vim'
 " Vim Markdown.
 Plugin 'plasticboy/vim-markdown'

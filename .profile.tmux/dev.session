@@ -1,0 +1,4 @@
+neww 'vim'
+split-window -v 'python'  
+split-window -h  
+new-window 'htop'
