@@ -1,8 +1,13 @@
 #!/bin/bash
 
 echo "Cloning Vundle into profile "
+mkdir -p $HOME/.vim/
 
 git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
+
+mkdir -p bundle && cd bundle
+
+./install_pythonmode
 
 echo "Removing not necessary files i.e. README, .git"
 

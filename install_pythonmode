@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "Cloning Python-Mode bundle into profile "
+
+git clone https://github.com/python-mode/python-mode.git $HOME/.vim/bundle/python-mode
