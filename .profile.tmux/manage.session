@@ -1,0 +1,3 @@
+neww -n "manage"
+neww -n "ping-htop" 'ping 8.8.8.8'
+split-window -v -p 70 'htop'

@@ -4,8 +4,13 @@ pwd=$(pwd)
 ln -s $pwd/.vimrc $HOME/.vimrc 
 # Tmux
 mkdir $HOME/.profile.tmux
+# Dev session
 ln -s $pwd/.profile.tmux/dev $HOME/.profile.tmux/dev
 ln -s $pwd/.profile.tmux/dev.session $HOME/.profile.tmux/dev.session
+# Manage session
+ln -s $pwd/.profile.tmux/manage $HOME/.profile.tmux/manage
+ln -s $pwd/.profile.tmux/manage.session $HOME/.profile.tmux/manage.session
+
 ln -s $pwd/.tmux.conf $HOME/.tmux.conf
 # Profile
 ln -s $pwd/.profile.aliases $HOME/.profile.aliases

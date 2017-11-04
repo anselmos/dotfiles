@@ -1,4 +1,13 @@
-neww 'vim'
-split-window -v 'python'  
-split-window -h  
-new-window 'htop'
+# neww = new-window
+# BLOG window
+neww -n "cmus" 'cmus'
+neww -n "wiki" -c '/home/anselmos/projects/wiki/' 'vim index.wiki'
+neww -n "blog" -c "/home/anselmos/projects/anselmos_blog/data/" 'vim'
+split-window -v -p 15 -c "/home/anselmos/projects/anselmos_blog/" 'make run'
+split-window -h -c "/home/anselmos/projects/anselmos_blog/"
+# BikingEndorphines
+neww -n "bikeorphines" -c "~/projects/Biking-Endorphines/bikingendorphines" 'source ../.env/bin/activate && bash'
+neww -n "dev.session" -c "/home/anselmos/projects/dotfiles/.profile.tmux/"
+neww -n "ssh-dockerrpi" 'ssh DockerRPI-external'
+neww -n "pygithub-playground" -c "/home/anselmos/projects/playground/pygithub_playground/" 'vim main.py'
+split-window -v -p 15 -c "/home/anselmos/projects/playground/pygithub_playground/"
