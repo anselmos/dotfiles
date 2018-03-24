@@ -4,6 +4,7 @@
     gr = "log --graph --full-history --all --oneline --color"
     l = log --date=iso --graph --full-history --all --color --pretty=format:'%x08%x09%C(red)%h %C(cyan)%ad%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08 %C(bold blue)%aN%C(reset)%C(bold yellow)%d %C(reset)%s'
     ll = log --graph --full-history --all --color --pretty=format:'%x08%x09%C(red)%h %C(cyan)%ar %C(bold blue)%aN%C(reset)%C(bold yellow)%d %C(reset)%s'
+    stuno = "status -uno ."
 
 [core]
     whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
@@ -29,6 +30,9 @@
     local = yellow
     remote = green
 
+[user]
+    name = Anselmos
+    email = anselmos@users.noreply.github.com
 
 # -Sget  - will look for "get" in patches
 # -p - shows patches 

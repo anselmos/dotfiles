@@ -20,21 +20,32 @@ Plugin 'benmills/vimux'
 " A Git fuse for vim
 Plugin 'tpope/vim-fugitive'
 " A lintener and syntax checker!
-Plugin 'vim-syntastic/syntastic'
+" Plugin 'vim-syntastic/syntastic'
 " adds information about marks at left side
 Plugin 'kshenoy/vim-signature'
 " Wiki in VIM!
 Plugin 'vimwiki/vimwiki'
 " Surroundings for code
 Plugin 'tpope/vim-surround'
+" SimpleNote 
+Plugin 'mrtazz/simplenote.vim'
+" Vim-Template
+Plugin 'aperezdc/vim-template'
+" Vim-GitGutter
+Plugin 'airblade/vim-gitgutter'
+" === ULTISNIPS START HERE ===
+" Track the engine.
+Plugin 'SirVer/ultisnips'
+
+" Snippets are separated from the engine. Add this if you want them:
+Plugin 'honza/vim-snippets'
+" === ULTISNIPS ENDS HERE ===
+" WakaTime!!
+Plugin 'wakatime/vim-wakatime'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
-
-
-call pathogen#infect()
-call pathogen#helptags()
-
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
@@ -66,7 +77,6 @@ try
 	colorscheme desert
 catch
 endtry
-
 set background=dark
 set encoding=utf8
 " Use spaces instead of tabs
@@ -89,6 +99,39 @@ highlight BadWhitespace ctermbg=red guibg=red
 
 au BufRead,BufNewFile *.py,*.pyw match BadWhitespace /^\t\+/
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
-let g:syntastic_python_checkers = ['pylint']
+" let g:syntastic_python_checkers = ['pylint']
 " add django plugin for pylinter
-let g:syntastic_python_pylint_args = "--load-plugins pylint_django"
+" let g:syntastic_python_pylint_args = "--load-plugins pylint_django"
+
+" For Vim-Template global variables:
+let g:templates_no_autocmd = 0
+let g:license = 'MIT'
+let g:username = '[Anselmos](github.com/anselmos)'
+let g:email = 'anselmos@users.noreply.github.com'
+
+let g:SignatureForceMarkPlacement = 1
+
+" FOR ULTISNIPS
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+" END FOR ULTISNIPS.
+
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
+" for gitgutter to update faster changes at vim
+set updatetime=250
+
+nmap ]h <Plug>GitGutterNextHunk
+nmap [h <Plug>GitGutterPrevHunk
+nmap <Leader>hv <Plug>GitGutterPreviewHunk
+try 
+    " Adds a simplenote user/password
+    source ~/.vimrc.simplenote
+catch
+endtry

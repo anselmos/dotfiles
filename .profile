@@ -6,3 +6,4 @@ export PATH=$PATH:~/.profile.sh
 . ~/.profile.prompt
 . ~/.profile.setvi
 . ~/.profile.aliases
+. ~/.profile.pyenv

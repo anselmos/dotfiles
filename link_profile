@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo "Cloning Vundle into profile "
+mkdir -p $HOME/.vim/
+git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
+
+mkdir -p bundle && cd bundle
+ln -s $(pwd)/.vimrc ~/.vimrc
+ln -s $(pwd)/.vimrc.simplenote ~/.vimrc.simplenote
+ln -s $(pwd)/.profile.prompt ~/.profile.prompt
+ln -s $(pwd)/.profile.aliases ~/.profile.aliases
+ln -s $(pwd)/.profile.scripts ~/.profile.scripts
+ln -s $(pwd)/.profile.setvi ~/.profile.setvi
+ln -s $(pwd)/.profile.pyenv ~/.profile.pyenv
+ln -s $(pwd)/.tmux.conf ~/.tmux.conf
+ln -s $(pwd)/.bashrc ~/.bashrc
