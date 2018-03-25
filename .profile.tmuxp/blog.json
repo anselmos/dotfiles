@@ -1,0 +1,53 @@
+{
+    "start_directory": "~/projects/anselmos_blog/",
+    "windows": [
+        {
+            "window_index": 0,
+            "window_name": "content",
+            "start_directory": "./data/content/articles",
+            "panes": [
+                {
+                   "shell_command": [
+                       "vim ."
+                    ],
+                    "focus": true
+                }
+            ],
+            "focus": true
+        },
+        {
+            "window_index": 1,
+            "window_name": "dev",
+            "start_directory": "./data",
+            "shell_command_before": [
+                "cd pelican-plugins/pelican_link_to_title/",
+                "sh runredis.sh",
+                "cd -"
+            ],
+            "panes": [
+                "pipenv run make devserver"
+            ]
+        },
+        {
+            "window_index": 2,
+            "window_name": "publish",
+            "shell_command_before": [
+                "cd ~/projects/anselmos_blog/"
+            ],
+            "panes": [
+                "echo 'make publish_ftp'"
+            ]
+        },
+        {
+            "window_index": 3,
+            "window_name": "social",
+            "shell_command_before": [
+                "cd ~/projects/day_to_day_automation/blog/"
+            ],
+            "panes": [
+                "echo 'pipenv run python get_post_summary.py ~/projects/anselmos_blog/data/content/articles/'" 
+            ]
+        }
+    ], 
+    "session_name": "blog"
+}

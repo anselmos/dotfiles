@@ -12,5 +12,6 @@ ln -s $(pwd)/.profile.aliases ~/.profile.aliases
 ln -s $(pwd)/.profile.scripts ~/.profile.scripts
 ln -s $(pwd)/.profile.setvi ~/.profile.setvi
 ln -s $(pwd)/.profile.pyenv ~/.profile.pyenv
+ln -s $(pwd)/.profile.tmuxp ~/.profile.tmuxp
 ln -s $(pwd)/.tmux.conf ~/.tmux.conf
 ln -s $(pwd)/.bashrc ~/.bashrc
