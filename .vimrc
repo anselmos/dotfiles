@@ -42,6 +42,10 @@ Plugin 'honza/vim-snippets'
 " === ULTISNIPS ENDS HERE ===
 " WakaTime!!
 Plugin 'wakatime/vim-wakatime'
+" NerdTREE
+Plugin 'scrooloose/nerdtree'
+" CommandT!
+Plugin 'wincent/command-t'
 
 
 " All of your Plugins must be added before the following line
@@ -135,3 +139,4 @@ try
     source ~/.vimrc.simplenote
 catch
 endtry
+nmap <C-n> :NERDTreeToggle<CR>

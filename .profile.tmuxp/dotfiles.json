@@ -1,0 +1,21 @@
+{
+    "start_directory": "~/projects/dotfiles/",
+    "windows": [
+        {
+            "window_name": "git ",
+            "shell_command_before": [
+                "git status ."
+            ],
+            "panes": [
+                "git stuno",
+                "git diff"
+            ]
+        },
+        {
+            "panes": [
+                "vim +NERDTree"
+            ]
+        }
+    ], 
+    "session_name": "dotfiles"
+}
