@@ -12,8 +12,10 @@
             ]
         },
         {
+            "window_name": "tmuxp",
+            "start_directory": ".profile.tmuxp",
             "panes": [
-                "vim +NERDTree"
+                "vim +NERDTree -O blog.json dotfiles.json"
             ]
         }
     ], 
