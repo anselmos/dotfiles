@@ -129,7 +129,7 @@ python from powerline.vim import setup as powerline_setup
 python powerline_setup()
 python del powerline_setup
 " for gitgutter to update faster changes at vim
-set updatetime=250
+set updatetime=450
 
 nmap ]h <Plug>GitGutterNextHunk
 nmap [h <Plug>GitGutterPrevHunk
