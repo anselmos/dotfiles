@@ -7,3 +7,5 @@ export PYTHONSTARTUP=~/.pythonrc
 . ~/.profile.setvi
 . ~/.profile.aliases
 . ~/.profile.pyenv
+# sdkman must be last!
+. ~/.profile.sdkman
