@@ -41,7 +41,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 " === ULTISNIPS ENDS HERE ===
 " WakaTime!!
-Plugin 'wakatime/vim-wakatime'
+" Plugin 'wakatime/vim-wakatime'
 " NerdTREE
 Plugin 'scrooloose/nerdtree'
 " CommandT!
@@ -125,9 +125,9 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsEditSplit="vertical"
 " END FOR ULTISNIPS.
 
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
+" python from powerline.vim import setup as powerline_setup
+" python powerline_setup()
+" python del powerline_setup
 " for gitgutter to update faster changes at vim
 set updatetime=450
 
